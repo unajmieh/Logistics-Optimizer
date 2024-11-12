@@ -1,0 +1,1 @@
+# Heatmap only for berth occupancy rates 
