@@ -8,6 +8,9 @@ The **Logistics Space Allocator** is a solution to an NP-hard problem in logisti
 
 In logistics, effective space allocation is crucial for optimizing operations, reducing costs, and improving service levels. Traditional methods often struggle with the complexity and variability inherent in this NP-hard problem. Our approach leverages meta-heuristic algorithms to find near-optimal solutions in a reasonable time frame.  
 
+![1-s2 0-S1366554524000462-gr3](https://github.com/user-attachments/assets/106afc25-025c-4e61-91a8-4eb830e64648)
+
+
 ## Algorithm  
 
 ### Enhanced Cuckoo Search Algorithm  
