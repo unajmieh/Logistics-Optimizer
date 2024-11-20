@@ -9,7 +9,7 @@ In logistics, effective space allocation is crucial for optimizing operations, r
 ![1-s2 0-S1366554524000462-gr3](https://github.com/user-attachments/assets/106afc25-025c-4e61-91a8-4eb830e64648)
 
 
-## Algorithm  
+## Algorithm in use 
 
 ### Enhanced Cuckoo Search Algorithm  
 
@@ -18,7 +18,7 @@ The Cuckoo Search Algorithm is a nature-inspired optimization technique that mim
 - **Adaptive Step Size**: Dynamically adjusts the step size based on the search progress.  
 - **Levy Flights**: Incorporates Levy flights to improve exploration capabilities.  
 
-### Gaussian Mixture Clustering  
+### Gaussian Mixture Clustering for Pareto Front Multi-objective Optimization of the Problem
 
 Gaussian Mixture Models (GMM) are employed to cluster the data points. By integrating GMM with the cuckoo search process, we allow for:  
 
@@ -28,7 +28,7 @@ Gaussian Mixture Models (GMM) are employed to cluster the data points. By integr
 
 ## Features  
 
-- **Robust Optimization**: Addresses complexities of NP-hard space allocation problems.  
+- **Robust Multi Optimization**: Addresses complexities of NP-hard space allocation problems.  
 - **Meta-Heuristic Approach**: Combines the strengths of cuckoo search and Gaussian mixture clustering.  
 - **Flexibility**: Easily adaptable to various logistics scenarios and constraints.  
 - **Performance**: Efficiently handles large datasets and provides near-optimal solutions.  
