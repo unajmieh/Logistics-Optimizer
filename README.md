@@ -1,8 +1,6 @@
-# Logistics Space Allocator  
-
 ## Overview  
 
-The **Logistics Space Allocator** is a solution to an NP-hard problem in logistics involving optimal space allocation for warehouses and distribution centers. This project implements an **Enhanced Cuckoo Search Algorithm with Gaussian Mixture Clustering** (ECS-GMC) to efficiently and effectively allocate logistical resources, maximizing space utilization and minimizing costs.  
+The **The Logistics Optimizer** is a solution to an NP-hard problem in logistics involving optimal space allocation for warehouses and distribution centers. This project implements an **Enhanced Cuckoo Search Algorithm with Gaussian Mixture Clustering** (ECS-GMC) to efficiently and effectively allocate logistical resources, maximizing space utilization and minimizing costs.  
 
 ## Problem Statement  
 
