@@ -16,7 +16,7 @@ from utils import (
 from utils import total_time_slots, time_window_length, num_vessels, num_berths
 
 # --- Rename these -----
-from BenhancedClusteringCuckooSearch import top_nests_3, convergence_costs_3
+from EnhancedClusteringCuckooSearch import top_nests_3, convergence_costs_3
 from MainNestGeneration import c_min, c_max
 import numpy as np
 import csv

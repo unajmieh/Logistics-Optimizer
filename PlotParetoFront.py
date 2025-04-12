@@ -1,12 +1,12 @@
 import numpy as np  
+import seaborn as sns  
+import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans  
 from sklearn.mixture import GaussianMixture  
-import matplotlib.pyplot as plt  
-import seaborn as sns  
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.mixture import GaussianMixture
+from sklearn.cluster import DBSCAN
 
-
-import numpy as np
-import matplotlib.pyplot as plt
 
 # Original Data
 costs = [1.0884935606545056, 1.401030463573885, 2.2081470782222143, 2.859467331647874, 
@@ -70,12 +70,7 @@ plt.tight_layout()
 plt.show()
 
 
-############-kmeans-####################
-
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans
-
+#--------Initial Clustering Algorithm model------------------------
 # Original Data
 costs = [1.0884935606545056, 1.401030463573885, 2.2081470782222143, 2.859467331647874, 
          4.443448594557075, 5.294871846937422, 5.7420065440537345, 15.481036748293075, 
@@ -137,13 +132,7 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-
-###############ckmeans#############
-
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.cluster import DBSCAN
-
+#--------Second Clustering Algorithm model------------------------
 # Data
 costs = [1.0884935606545056, 1.401030463573885, 2.2081470782222143, 2.859467331647874, 
          4.443448594557075, 5.294871846937422, 5.7420065440537345, 15.481036748293075, 
@@ -178,14 +167,7 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-
-############-DBC-####################
-
-
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.cluster import DBSCAN
-
+#-------------DBC Clustering Algorithm model------------------------
 # Data
 costs = [1.0884935606545056, 1.401030463573885, 2.2081470782222143, 2.859467331647874, 
          4.443448594557075, 5.294871846937422, 5.7420065440537345, 15.481036748293075, 
@@ -220,13 +202,7 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-
-############-hierarchial clustering-####################
-
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.cluster import AgglomerativeClustering
-
+#-------Hierarchial clustering----------------------
 # Data
 costs = [1.0884935606545056, 1.401030463573885, 2.2081470782222143, 2.859467331647874, 
          4.443448594557075, 5.294871846937422, 5.7420065440537345, 15.481036748293075, 
@@ -261,12 +237,7 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-####### gaussian mixture clustering #######
-
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.mixture import GaussianMixture
-
+#------ Gaussian mixture clustering ------------------
 # Data
 costs = [1.0884935606545056, 1.401030463573885, 2.2081470782222143, 2.859467331647874, 
          4.443448594557075, 5.294871846937422, 5.7420065440537345, 15.481036748293075, 

@@ -28,10 +28,8 @@ from MainNestGeneration import (
 )
 from BaseCuckooSearch import convergence_costs_sorted
 
-
 all_costs = []
 removed_nests = []  # Initialize an empty list to store removed nests
-
 all_nests = []
 num_iterations = 30
 weights = [1.1, 1.2, 1.3, 1.5]
@@ -64,7 +62,7 @@ top_nests = []
 iteration = 30
 
 # ----------- The start of Enhanced cuckoo search--------------
-
+###############################################################
 def cuckoo_search_with_cost(MaxNumberEvaluations, num_nests, num_vessels, a_range,  cost_calculator, custom_rng, LocalSearch, Lambda, dimension, step_size):
     NumberObjectionEvaluations = 0
     convergence_costs = []
@@ -108,22 +106,12 @@ def cuckoo_search_with_cost(MaxNumberEvaluations, num_nests, num_vessels, a_rang
 
 
         X = np.array(nests)
-
-        # Replace KMeans with Gaussian Mixture clustering  
         gmm = GaussianMixture(n_components=10, n_init=5, random_state=0).fit(X) 
         cluster_centers = gmm.means_  # Get the means of the Gaussian components  
-
-        # Calculate distances from each nest to each cluster center  
         distances = [np.linalg.norm(np.array(nest) - cluster_center) for nest in nests for cluster_center in cluster_centers]  
-
-        # Sort distances and extract indices  
-        sorted_indices = np.argsort(distances)  
-
-        # Get top 30 nests based on sorted distances  
-        top_nests = [nests[i] for i in sorted_indices if i < len(nests)][:10]  
-
-        # Calculate the best cost for the first nest in top_nests  
-        best_cost = cost_calculator.calculate_cost_component2(top_nests[0])
+        sorted_indices = np.argsort(distances)  # Sort distances and extract indices  
+        top_nests = [nests[i] for i in sorted_indices if i < len(nests)][:10]  # Get top 30 nests based on sorted distances   
+        best_cost = cost_calculator.calculate_cost_component2(top_nests[0])  # Calculate the best cost for the first nest in top_nests 
         convergence_costs.append(best_cost)  
         # Calculate the best cost for each nest in top_nests
         #for nest in top_nests:
@@ -159,19 +147,11 @@ def plot_convergence(convergence_costs):
     plt.grid(True)
     plt.show()
 
-
-# Call the plotting function separately
-#plot_convergence(convergence_costs_3)
-#plot_convergence(convergence_costs_sorted)
-
 print("convergence_costs_3")
 print(convergence_costs_3)
-
-
 print("convergence_costs_sorted")
 print(convergence_costs_sorted[:40])
 
-import matplotlib.pyplot as plt
 
 def plot_multiple_convergences(convergence_sequences):
     """
@@ -194,16 +174,11 @@ def plot_multiple_convergences(convergence_sequences):
     plt.legend()  # Show legend with sequence labels
     plt.show()
 
-
-
-# Assuming convergence_costs_3 is your original list
 random_float_1 = random.uniform(5, 6)  
 random_float_2 = random.uniform(2, 4)  
 random_float_3 = random.uniform(4, 5)
 convergence_costs_1 = [item * random_float_1 for item in convergence_costs_3]
 convergence_costs_2 = [item * random_float_2 for item in convergence_costs_3]
 convergence_costs_4 = [item * random_float_3 for item in convergence_costs_3]
-
-
 
 plot_multiple_convergences([convergence_costs_3, convergence_costs_sorted[0:57]])

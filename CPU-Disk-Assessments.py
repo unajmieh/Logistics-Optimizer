@@ -1,6 +1,5 @@
 # --- CPU usage plots ------------------
 # --- Memory usage plots ---------------
-"""
 import psutil  
 import matplotlib.pyplot as plt  
 from time import sleep  
@@ -127,7 +126,7 @@ plt.show()
 
 
 #--------------- thesis Table ---------------------------
-"""
+
 1) the best cost found by the algorithm 
 2) the number of iterations of the algorithm 
 3) the average cost of top found nests

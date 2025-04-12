@@ -89,21 +89,14 @@ class CustomRandom:
         return samples
     
     def generate_sobol_integer_list(self, num_arrays, num_elements, max_value):  
-            # Initialize the Sobol engine  
             sobol_engine = qmc.Sobol(d=num_elements, scramble=True)  
-
-            # Generate Sobol sequence points between 0 to 1  
-            sobol_samples = sobol_engine.random(n=num_arrays)  
-
-            # Scale the samples to integers within the specified range  
-            sobol_integer_array = (sobol_samples * max_value).astype(int).tolist()  
-
+            sobol_samples = sobol_engine.random(n=num_arrays)   # Generate Sobol sequence points between 0 to 1  
+            sobol_integer_array = (sobol_samples * max_value).astype(int).tolist()    # Scale the samples to integers within the specified range  
             # Ensure increasing properties - adapt sample values for increasing patterns  
             for i in range(num_arrays):  
                 for j in range(num_elements):  
                     if j > 0 and sobol_integer_array[i][j] <= sobol_integer_array[i][j - 1]:  
                         sobol_integer_array[i][j] = sobol_integer_array[i][j - 1] + 1  
-
             return sobol_integer_array  
 
 
@@ -115,9 +108,7 @@ b_range = 6
 c_min = 2
 c_max = 4
 #Nests = custom_rng.initialize_nests(num_nests, num_vessels, a_range, b_range, c_min, c_max)
-
 #print(Nests)
-
 
 #---- second data generation method -- for latin_hypercube_sampling method---# 
 # Parameters  
@@ -126,8 +117,6 @@ num_points = 20
 bounds = [(0, 66), (-5, 5), (1, 100), (10, 20), (0, 50), (5, 15), (1, 66)]  
 num_samples = num_points  
 num_vars = num_dimensions  
-
-
 
 # Generate Sobol sequence samples  
 # Specify the number of internal arrays and the number of elements in each  
