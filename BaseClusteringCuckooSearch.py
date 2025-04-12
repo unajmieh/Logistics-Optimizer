@@ -230,13 +230,9 @@ plt.xlim(0, num_iterations)
 plt.tight_layout()
 plt.show()
 
-# ---- sensitivity analysis ----
-
-
-# ---- Robustness analysis -----
-
-
-# --------------- thesis Table ---------------------------
+# ---- sensitivity analysis ------------------------------
+# ---- Robustness analysis -------------------------------
+# --------------- thesis Tables ---------------------------
 """
 1) the best cost found by the algorithm 
 2) the number of iterations of the algorithm 

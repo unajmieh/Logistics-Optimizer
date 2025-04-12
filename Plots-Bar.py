@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt  
 import numpy as np  
-"""
+
 # Data  
 efficiency = [74.65, 67.61, 83.23, 84.56]  
 cost = [0.95, 5.30, 4.50, 6.45]  
@@ -41,10 +41,7 @@ ax1[1].grid(axis='y', linestyle='--', alpha=0.7)
 # Show the plot  
 plt.tight_layout()  
 plt.show()
-""" 
 
-import numpy as np
-import matplotlib.pyplot as plt
 
 # Data
 efficiency = [74.65, 67.61, 83.23, 84.56]
@@ -144,8 +141,6 @@ add_labels(bars4)
 # Show the plot  
 plt.tight_layout()  
 plt.show()
-
-
 
 
 # Data extracted from the table  

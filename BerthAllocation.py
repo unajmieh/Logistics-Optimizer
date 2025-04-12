@@ -15,7 +15,7 @@ from utils import (
 )
 from utils import total_time_slots, time_window_length, num_vessels, num_berths
 # --- Rename these -----
-from BenhancedClusteringCuckooSearch import top_nests_3, convergence_costs_3
+from EnhancedClusteringCuckooSearch import top_nests_3, convergence_costs_3
 #from BaseCuckooSearch import nests, best_cost, top_nests
 #from CEDA import best_cost_2, top_nests_2
 #from CPSO import top_nests_4, top_costs_4
